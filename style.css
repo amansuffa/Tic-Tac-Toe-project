@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-bg-color);
+}
+
+
+:root {
+  --main-bg-color: #e5ddc8;
+  --primary-color: #0b0b0c;
+  --sec-color: #e07a5f;
+  --hover:#b9664f;
+}
+/* :root {
+  --main-bg-color: #2EB5E0;
+  --primary-color: #C4DBE0;
+  --sec-color: #0C6980;
+  --hover:#083c49;
+} */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 10px; */
+}
+main h1 {
+  font-family: "Fredoka", sans-serif;
+  height: 18vmin;
+  text-align: center;
+  line-height: 18vmin;
+  font-size: 10vmin;
+  color: var(--sec-color);
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.game {
+  width: 64vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vmin;
+  place-content: center;
+  padding: 0 3vmin;
+}
+
+@media only screen and (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    gap: 2vmin;
+  }
+  .game-container {
+    margin: auto;
+  }
+  .btns {
+    align-items: center;
+  }
+  img {
+    margin-right: 8vmin;
+  }
+}
+
+.box {
+  height: 20vmin;
+  width: 20vmin;
+  background-color: var(--sec-color);
+  color: var(--primary-color);
+  border-radius: 3vmin;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 12vmin;
+  cursor: pointer;
+  border: none;
+  &:hover {
+    background-color: var(--hover);
+  }
+}
+
+.other {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 7vmin;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vmin;
+  margin-top: 3vmin;
+}
+
+@media only screen and (min-width: 850px) {
+  .game-container {
+    width: 50vw;
+  }
+  .game {
+    margin-left: auto;
+  }
+
+  .other {
+    align-items: flex-start;
+    width: 50vw;
+    padding-left: 5vmin;
+  }
+}
+
+#turn-msg {
+  font-size: 0.5em;
+  height: 3vmin;
+}
+img {
+  width: 0;
+  transition: width 0.5s ease-in-out;
+}
+.btn {
+  color: var(--primary-color);
+  cursor: pointer;
+  width: 7em;
+  height: 2em;
+  border-style: none;
+  font-size: 0.5em;
+  background-color: var(--sec-color);
+  padding: 0.5em;
+  border-radius: 0.2em;
+}
